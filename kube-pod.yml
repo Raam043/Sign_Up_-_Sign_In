@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: login-project
   labels:
-    app: myapp
+    app: login-project
 spec:
   containers:
   - image: raam043/login-project 

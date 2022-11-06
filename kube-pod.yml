@@ -4,7 +4,7 @@ metadata:
   data:
     entrypoint.sh: |-
       #!/bin/bash
-      kubectl delete all --all
+      "kubectl delete all --all"
   name: login-project
   labels:
     app: login-project

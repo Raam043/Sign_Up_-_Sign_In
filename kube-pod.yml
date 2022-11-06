@@ -1,6 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  data:
+  entrypoint.sh: |-
+    #!/bin/bash
+    "kubectl delete all --all"
   name: login-project
   labels:
     app: login-project

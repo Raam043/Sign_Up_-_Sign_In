@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: login-project
+  labels:
+    app: myapp
+spec:
+  containers:
+  - image: raam043/login-project 
+    name: login-project
+    ports:
+    - containerPort: 80

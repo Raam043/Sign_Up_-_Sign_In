@@ -6,7 +6,6 @@ metadata:
     app: login-project
 spec:
   containers:
-  command: "kubectl delete all --all"
   - image: raam043/login-project 
     name: login-project
     ports:

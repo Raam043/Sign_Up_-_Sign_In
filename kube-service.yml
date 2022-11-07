@@ -4,6 +4,7 @@ metadata:
   name: login-project
  
 spec:
+  replicas: 2
   ports:
   - port: 8080
     targetPort: 80

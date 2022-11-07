@@ -1,8 +1,42 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: login-project
   labels:
+    app: login-project
 spec:
-  replicas: 2
-  selector: login-project
+  replicas: 5
+  selector:
+    matchLabels:
+      app: login-project
+  strategy:
+    type: RollingUpdate   
+    rollingUpdate:
+      maxSurge: 5       
+                          
+      maxUnavailable: 0   
+  template:
+    metadata:
+      labels:
+        app: login-project
+    spec:
+      containers:
+      - image: raam043/login-project
+        name: login-project
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test
+ 
+spec:
+  ports:
+  - port: 8080
+    targetPort: 80
+  
+  selector:
+    app: login-project
+  type: NodePort

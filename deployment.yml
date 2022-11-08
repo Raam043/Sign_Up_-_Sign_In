@@ -5,14 +5,14 @@ metadata:
   labels:
     app: login-project
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: login-project
   strategy:
     type: RollingUpdate   
     rollingUpdate:
-      maxSurge: 3       
+      maxSurge: 5       
                           
       maxUnavailable: 0   
   template:

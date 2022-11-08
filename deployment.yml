@@ -21,7 +21,7 @@ spec:
         app: login-project
     spec:
       containers:
-      - image: raam043/login-project
+      - image: raam043/kube-project
         name: login-project
         ports:
         - containerPort: 80

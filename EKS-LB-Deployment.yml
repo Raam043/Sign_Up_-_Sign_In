@@ -22,10 +22,11 @@ spec:
     spec:
       containers:
       - image: raam043/eks-test
+        imagePullPolicy: Always
         name: eks-test
         ports:
         - containerPort: 80
-        imagePullPolicy: Always
+        
 
 ---
 apiVersion: v1
